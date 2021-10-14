@@ -30,7 +30,7 @@ export default function App() {
   const offset = currentPage * PER_PAGE;
 
   const currentPageData = data
-    .slice(offset, offset + PER_PAGE)
+    .slice(0, offset + PER_PAGE)
     .map(({ thumburl }) => <img src={thumburl} />);
 
   const pageCount = Math.ceil(data.length / PER_PAGE);
