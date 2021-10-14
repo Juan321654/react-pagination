@@ -24,7 +24,8 @@ export default function App() {
   }
 
   function handlePageClick({ selected: selectedPage }) {
-    setCurrentPage(selectedPage);
+    // if using material ui or bootstrap might need to subtract 1 to stop first items to be sliced out
+    setCurrentPage(selectedPage - 1);
   }
 
   const offset = currentPage * PER_PAGE;
